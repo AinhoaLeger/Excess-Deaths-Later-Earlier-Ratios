@@ -1109,28 +1109,27 @@ rmse <- pred %>%
                            (expected.av.1819-observed.1819)^2 ) )) %>%
   select(country_code, sex, age_group, rmse.ratio, rmse.av)
 
-# rmse
-# country_code    sex age_group rmse.ratio    rmse.av
-# 1        France Female    [0,15)   32.23422   34.09119
-# 2         Spain Female    [0,15)   21.97689   32.48056
-# 3        France Female   [15,65)  273.47631  336.20269
-# 4         Spain Female   [15,65)   67.76821  112.90730
-# 5        France Female   [65,75)  291.54804 1128.07083
-# 6         Spain Female   [65,75)  230.43805  141.44285
-# 7        France Female   [75,85) 1141.41851 1898.23569
-# 8         Spain Female   [75,85)  745.62194 1934.39291
-# 9        France Female       85+ 5222.08483 4816.57220
-# 10        Spain Female       85+ 2358.84840 2523.69883
-# 11       France   Male    [0,15)   24.14997   15.31516
-# 12        Spain   Male    [0,15)   21.81097   48.91832
-# 13       France   Male   [15,65)  371.86281 1512.51409
-# 14        Spain   Male   [15,65)  288.48828  556.28061
-# 15       France   Male   [65,75)  634.51056 1715.88423
-# 16        Spain   Male   [65,75)  344.76005  239.50940
-# 17       France   Male   [75,85) 1374.52768 1825.76127
-# 18        Spain   Male   [75,85)  964.45014 1967.54829
-# 19       France   Male       85+ 2521.01055 3170.79160
-# 20        Spain   Male       85+ 1543.32994 2222.20264
+#    country_code    sex age_group rmse.ratio    rmse.av
+# 1        France Female    [0,15)   32.23422   45.23813
+# 2         Spain Female    [0,15)   21.97689   37.38855
+# 3        France Female   [15,65)  273.47631  343.05821
+# 4         Spain Female   [15,65)   67.76821  114.58615
+# 5        France Female   [65,75)  291.54804 1340.75162
+# 6         Spain Female   [65,75)  230.43805  310.34740
+# 7        France Female   [75,85) 1141.41851 1765.98968
+# 8         Spain Female   [75,85)  745.62194 1696.04727
+# 9        France Female       85+ 5222.08483 6087.38093
+# 10        Spain Female       85+ 2358.84840 4425.17436
+# 11       France   Male    [0,15)   24.14997   19.92183
+# 12        Spain   Male    [0,15)   21.81097   48.57539
+# 13       France   Male   [15,65)  371.86281 1527.04924
+# 14        Spain   Male   [15,65)  288.48828  486.83781
+# 15       France   Male   [65,75)  634.51056 2129.66161
+# 16        Spain   Male   [65,75)  344.76005  612.47968
+# 17       France   Male   [75,85) 1374.52768 1636.76857
+# 18        Spain   Male   [75,85)  964.45014 1532.81403
+# 19       France   Male       85+ 2521.01055 4002.32311
+# 20        Spain   Male       85+ 1543.32994 3384.22825
 
 ###### Compute the mean absolute percentage error
 mape <- pred %>%
@@ -1151,7 +1150,7 @@ mape <- pred %>%
 mean(mape$mape.ratio)
 # [1] 2.247696
 mean(mape$mape.av)
-# [1] 3.969444
+# [1] 5.017901
 
 
 
@@ -1175,26 +1174,6 @@ tab.rmse <-
            France_Male_rmse.ratio, France_Male_rmse.av,
            Spain_Female_rmse.ratio, Spain_Female_rmse.av,
            Spain_Male_rmse.ratio, Spain_Male_rmse.av)
-
-# tab.rmse
-  # age_group France_Female_rmse.ratio France_Female_rmse.av
-# 1    [0,15)                       32                    45
-# 2   [15,65)                      273                   343
-# 3   [65,75)                      292                  1341
-# 4   [75,85)                     1141                  1766
-# 5       85+                     5222                  6087
-# France_Male_rmse.ratio France_Male_rmse.av Spain_Female_rmse.ratio
-# 1                     24                  20                      22
-# 2                    372                1527                      68
-# 3                    635                2130                     230
-# 4                   1375                1637                     746
-# 5                   2521                4002                    2359
-# Spain_Female_rmse.av Spain_Male_rmse.ratio Spain_Male_rmse.av
-# 1                   37                    22                 49
-# 2                  115                   288                487
-# 3                  310                   345                612
-# 4                 1696                   964               1533
-# 5                 4425                  1543               3384
 
 setwd(dir.out)
 write_xlsx(tab.rmse,"Tab2_national.xlsx")
