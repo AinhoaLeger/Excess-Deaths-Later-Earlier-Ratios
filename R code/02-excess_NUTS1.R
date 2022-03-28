@@ -11,8 +11,8 @@
 
 rm(list=ls())
 
-dir.in <- "C:/Users/Ainhoa/Desktop/01 - Population Leger, Rizzi/1 - Data/In"
-dir.out <- "C:/Users/Ainhoa/Desktop/01 - Population Leger, Rizzi/1 - Data/Out"
+dir.in <- ".../In"
+dir.out <- ".../Out"
 
 library(tidyverse)
 library(ggplot2)
