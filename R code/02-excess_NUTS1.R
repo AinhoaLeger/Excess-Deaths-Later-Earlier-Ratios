@@ -32,7 +32,7 @@ library(directlabels)
 
 setwd(dir.in)
 
-# Load file downloaded from HMD
+# Load file downloaded from Eurostat
 eurostat <- read.table("demo_r_mwk2_10_1_Data.csv", header=TRUE, sep=",")
 
 
