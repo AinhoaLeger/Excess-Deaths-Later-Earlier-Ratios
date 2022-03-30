@@ -1,9 +1,7 @@
 
 #########################################################################
-# C:/Users/Ainhoa/Desktop/EDSD_Thesis_AEL
-# Created on 02/09/2021
-# Last modified on 21/09/2021
-# Ainhoa Elena Leger
+# Author: Ainhoa Elena Leger
+# Last update: 30-03-2022
 #########################################################################
 
 
