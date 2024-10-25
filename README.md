@@ -1,4 +1,4 @@
-# Excess-Deaths-Later/Earlier-Ratios-France-Spain-First-COVID-Wave
+# Excess-Deaths-Later/Earlier-Ratios
 
 Code for paper under review to Population journal
 
