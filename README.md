@@ -1,4 +1,4 @@
-# Shortcasting-Excess-Mortality
+# Excess-Deaths-Later/Earlier-Ratios-France-Spain-First-COVID-Wave
 
 Code for paper under review to Population journal
 
